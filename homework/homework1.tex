@@ -1,0 +1,43 @@
+\documentclass{article}
+\title{Homework 1}
+\author {Habit Blunk}
+\date{February 2025}
+\begin{document}
+\maketitle
+\begin{enumerate}
+  \item Base case. Begin by proving the first few cases
+    \begin{itemize}
+      \item 18 cents
+        \begin{displaymath}
+          3 + 3 + 3 + 3 + 3 + 3 = 18
+        \end{displaymath}
+      \item 19 cents
+        \begin{displaymath}
+          10 + 3 + 3 + 3 = 19
+        \end{displaymath}
+      \item 20 cents
+        \begin{displaymath}
+          10 + 10 = 20
+        \end{displaymath}
+      \item 21 cents
+        \begin{displaymath}
+          3 + 3 + 3 + 3 + 3 + 3 + 3 = 21
+        \end{displaymath}
+      \item 22 cents
+        \begin{displaymath}
+          10 + 3 + 3 + 3 + 3 = 22
+        \end{displaymath}
+    \end{itemize}
+    Thus, any fee from 18-22 cents can be paid for using only 3-cent and 10-cent stamps.
+  \item Inductive hypothesis\\
+    Assume that for some postage fee $ n >= 18 $, we can pay for this using only 3-cent and 10-cent stamps.
+  \item Inductive step\\
+    Prove that if we can pay for $ n $ cents, we can also pay for $ n + 1 $ cents.
+    We know from the inductive hypothesis that we can pay for n cents using only 3-cent and 10-cent stamps, so all we need to do is add one more 3-cent stamp to be able to pay for $ n + 1 $ stamps.
+    \begin{displaymath}
+      n + 3 = (n + 1) cents
+    \end{displaymath}
+  \item Conclusion\\
+    Therefore, we can pay for any postage fee over 18 cents using only 3-cent and 10-cent stamps.
+\end{enumerate}
+\end{document}
