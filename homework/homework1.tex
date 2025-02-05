@@ -32,10 +32,10 @@
   \item Inductive hypothesis\\
     Assume that for some postage fee $ n >= 18 $, we can pay for this using only 3-cent and 10-cent stamps.
   \item Inductive step\\
-    Prove that if we can pay for $ n $ cents, we can also pay for $ n + 1 $ cents.
-    We know from the inductive hypothesis that we can pay for n cents using only 3-cent and 10-cent stamps, so all we need to do is add one more 3-cent stamp to be able to pay for $ n + 1 $ stamps.
+    Prove that if we can pay for $ n + 1 $ cents, we can also pay for $ n - 2 $ cents.
+    If $ n - 2  >= 18 $, then all we have to do to pay for a postage fee of $ n + 1 $ cents is add another 3-cent stamp.
     \begin{displaymath}
-      n + 3 = (n + 1) cents
+      n + 1 = (n - 2) + 3 cents
     \end{displaymath}
   \item Conclusion\\
     Therefore, we can pay for any postage fee over 18 cents using only 3-cent and 10-cent stamps.
