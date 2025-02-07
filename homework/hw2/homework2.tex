@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Homework 2}
+\author{Habit Blunk}
+\date{February 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Axioms in non-CNF form}
+\begin{align*}
+   \neg (P \lor D) &\implies B \\
+   D &\implies (\neg Q \land P) \\
+   P &\implies (\neg A \land Q) \\
+   (\neg X \lor A) &\land (Q \lor Z) \\
+   \neg (X \implies Z)
+\end{align*}
+
+\section*{Axioms in CNF form}
+\begin{align*}
+   P \lor D \lor B \\
+   \neg D \lor \neg Q \\
+   \neg D \lor P \\
+   \neg P \lor \neg A \\
+   \neg P \lor Q \\
+   \neg X \lor A \\
+   Q \lor Z \\
+   X \\
+   \neg Z
+\end{align*}
+
+\section*{Proof}
+\begin{itemize}
+   \item Assume B to be false
+   \begin{align*}
+       P \lor D \lor B \\
+       \neg D \lor \neg Q \\
+       \neg D \lor P \\
+       \neg P \lor \neg A \\
+       \neg P \lor Q \\
+       \neg X \lor A \\
+       Q \lor Z \\
+       X \\
+       \neg Z \\
+       \neg B
+   \end{align*}
+   
+   \item Simplify for B
+   \begin{align*}
+       P \lor D \\
+       \neg D \lor \neg Q \\
+       \neg D \lor P \\
+       \neg P \lor \neg A \\
+       \neg P \lor Q \\
+       \neg X \lor A \\
+       Q \lor Z \\
+       X \\
+       \neg Z
+   \end{align*}
+   
+   \item Simplify for X
+   \begin{align*}
+       P \lor D \\
+       \neg D \lor \neg Q \\
+       \neg D \lor P \\
+       \neg P \lor \neg A \\
+       \neg P \lor Q \\
+       A \\
+       Q \lor Z \\
+       \neg Z
+   \end{align*}
+   
+   \item Simplify for A
+   \begin{align*}
+       P \lor D \\
+       \neg D \lor \neg Q \\
+       \neg D \lor P \\
+       \neg P \\
+       \neg P \lor Q \\
+       Q \lor Z \\
+       \neg Z
+   \end{align*}
+   
+   \item Simplify for Z
+   \begin{align*}
+       P \lor D \\
+       \neg D \lor \neg Q \\
+       \neg D \lor P \\
+       \neg P \\
+       \neg P \lor Q \\
+       Q
+   \end{align*}
+   
+   \item Simplify for Q
+   \begin{align*}
+       P \lor D \\
+       \neg D \lor \neg P \\
+       \neg D \lor P \\
+       \neg P
+   \end{align*}
+   
+   \item Simplify for P
+   \begin{align*}
+       D \\
+       \neg D \\
+       \neg D
+   \end{align*}
+   
+   \item Simplifying any further leads to an empty statement. Therefore, B must be true.
+\end{itemize}
+
+\end{document}
+
